@@ -8,6 +8,7 @@ const App = () => {
             date: "September 2022 – Present",
             points: [
                 "Architected and deployed 'Hexstrike AI MCPs' – a suite of custom Model Context Protocol servers designed to provide AI agents with real-time access to security toolchains.",
+                "Built and open-sourced 'sufa' – AI-powered web vulnerability analysis platform (CLI, Burp extension, API server) published on PyPI and Docker Hub.",
                 "Pioneering the integration of AI-driven security analysis, leveraging LLMs to automate vulnerability discovery and complex threat modeling.",
                 "Implementing Model Context Protocol (MCP) to build interoperable AI security tools, enabling seamless context sharing between scanners and autonomous agents.",
                 "Developing Advanced Agentic Pentesting workflows using autonomous AI agents for multi-stage exploitation and deep-dive post-exploitation tasks.",
@@ -33,7 +34,7 @@ const App = () => {
         "Hexstrike AI MCPs", "AI in Cybersecurity", "Agentic Pentesting", "MCP (Model Context Protocol)",
         "Penetration Testing", "Web Application Security", "SAST", "Python",
         "Linux", "Burp Suite", "Nessus", "Nmap", "Metasploit",
-        "LLM Security", "Nuclei", "SonarQube", "OWASP ZAP"
+        "LLM Security", "Nuclei", "SonarQube", "OWASP ZAP", "sufa"
     ];
 
     const certifications = [
@@ -41,6 +42,18 @@ const App = () => {
         "CERTIFIED NETWORK SECURITY SPECIALIST (ICSI)",
         "PRACTICAL ETHICAL HACKING (TCM Security)",
         "ETHICAL HACKING AND PENETRATION TESTING (Udemy)"
+    ];
+
+    const projects = [
+        {
+            name: "sufa",
+            description: "AI-powered web vulnerability analysis platform. CLI tool, Burp Suite extension, and API server. Combines LLM reasoning with traditional scanning for passive/active vulnerability discovery.",
+            links: [
+                { label: "GitHub", url: "https://github.com/sufiyansaidsha/sufaAI" },
+                { label: "PyPI", url: "https://pypi.org/project/sufa/" },
+                { label: "Docker Hub", url: "https://hub.docker.com/r/sufaai/sufaai" }
+            ]
+        }
     ];
 
     return (
@@ -54,6 +67,7 @@ const App = () => {
                     <div className="nav-links">
                         <a href="#about">About</a>
                         <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
                         <a href="#skills">Skills</a>
                         <a href="#contact">Contact</a>
                     </div>
@@ -93,6 +107,25 @@ const App = () => {
                                 <ul style={{ color: 'var(--text-dim)', paddingLeft: '1.2rem' }}>
                                     {exp.points.map((p, j) => <li key={j} style={{ marginBottom: '0.5rem' }}>{p}</li>)}
                                 </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" style={{ background: 'rgba(255,255,255,0.02)' }}>
+                <div className="container">
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem' }}>Projects & <span className="highlight">Tools</span></h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
+                        {projects.map((proj, i) => (
+                            <div key={i} className="card" style={{ padding: '1.5rem' }}>
+                                <h3 style={{ color: 'var(--primary)', marginBottom: '0.75rem', fontSize: '1.4rem' }}>{proj.name}</h3>
+                                <p style={{ color: 'var(--text-dim)', marginBottom: '1.25rem', lineHeight: 1.6 }}>{proj.description}</p>
+                                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                                    {proj.links.map((link, j) => (
+                                        <a key={j} href={link.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ fontSize: '0.9rem', padding: '0.4rem 0.8rem' }}>{link.label}</a>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>
