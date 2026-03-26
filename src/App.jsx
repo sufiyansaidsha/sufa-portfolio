@@ -7,7 +7,7 @@ const App = () => {
             company: "Beagle Security, Thiruvananthapuram",
             date: "September 2022 – Present",
             points: [
-                "Architected and deployed 'Hexstrike AI MCPs' – a suite of custom Model Context Protocol servers designed to provide AI agents with real-time access to security toolchains.",
+                "Leveraged Hexstrike AI’s MCP-based infrastructure to perform AI-assisted penetration testing, enabling automated vulnerability discovery, context-aware analysis, and multi-stage exploitation workflows.",
                 "Built and open-sourced 'sufa' – AI-powered web vulnerability analysis platform (CLI, Burp extension, API server) published on PyPI and Docker Hub.",
                 "Pioneering the integration of AI-driven security analysis, leveraging LLMs to automate vulnerability discovery and complex threat modeling.",
                 "Implementing Model Context Protocol (MCP) to build interoperable AI security tools, enabling seamless context sharing between scanners and autonomous agents.",
@@ -49,7 +49,6 @@ const App = () => {
             name: "sufa",
             description: "AI-powered web vulnerability analysis platform. CLI tool, Burp Suite extension, and API server. Combines LLM reasoning with traditional scanning for passive/active vulnerability discovery.",
             links: [
-                { label: "GitHub", url: "https://github.com/sufiyansaidsha/sufaAI" },
                 { label: "PyPI", url: "https://pypi.org/project/sufa/" },
                 { label: "Docker Hub", url: "https://hub.docker.com/r/sufaai/sufaai" }
             ]
